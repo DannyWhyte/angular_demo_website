@@ -1,0 +1,259 @@
+<header>
+    <div style="background-color:#222222">
+        <img src="images/generic/6-1.jpg" class="img-fluid" style="opacity: 0.2;">
+    </div>
+</header>
+<section style="padding:0px;">
+    <div class="container-fluid">
+        <!--<div class="row">
+            <br/>
+        </div>-->
+        <div class="row">
+            <div class="col-md-12 text-center" style=" margin-top:1.8%">
+                <h2 class="section-heading" style="color: black">{{listName}}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 rounded " style="margin-left: 3%;color:#eceeef" id="productPageBorder">
+                <div class="row">
+                    <div class="col-md-12 rounded text-center" style="background-color:#222222;padding: 5px; color: white" id="listName">Types</div>
+                    <div class="col-md-12">
+                        <table class="table  table-sm" style="color:black;">
+                            <!--<tr>
+                                <th>
+                                    <h8 class="section-heading rounded" id="listName" style="background-color:#222222">Styles</h8>
+                                </th>
+                            </tr>-->
+                            <tr>
+                                <td><a ng-click="allStyles()" style="color:black" href="">All Types</a></td>
+                                <td>({{allStylesLength}})</td>
+                            </tr>
+                            <tr ng-repeat="style in finalStyles">
+                                <td><a ng-click="fromStyles(style.styles)" style="color:black" href="">{{style.styles}}</a></td>
+                                <td>({{style.length}})</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-12 rounded text-center" style="background-color:#222222;padding: 5px; color: white" id="listName">Product Search</div>
+                    <div class="col-md-12">
+                        <br/>
+                        <div class="row">
+                            <a ng-click="searchFromKey()" class="col-md-12 text-center" style="color:black" href="">Search By Keyword</a>
+                        </div>
+                        <div class="row" ng-hide="showSearchFromKey == false">
+                            <br/>
+                        </div>
+                        <div class="row" ng-hide="showSearchFromKey == false">
+                            <div class="col-md-12 rounded text-center" id="searchProd">
+                                Search: <input ng-model="searchKeyword">
+                            </div>
+                        </div>
+                        <!--<div class="row">
+                            <div class="col-md-12 rounded text-center" id="searchProd">-->
+                        <br/>
+                        <!--</div>
+                        </div>-->
+                        <div class="row text-center">
+                            <a ng-click="searchFromSpec()" class="col-md-12 text-center" style="color:black" href="">Search By Specifications</a>
+                        </div>
+                        <div class="row">
+                            <br/>
+                        </div>
+                        <div class="row" ng-hide="showSearchFromKey == true">
+                            <form class="col-md-12" id="searchprodform">
+                                <div class="row" id="searchProd">
+                                    <div class="col-md-4 rounded text-center">
+                                        Type:
+                                    </div>
+                                    <div class="col-md-8 rounded text-center">
+                                        <select chosen="{width: '100%'}" class="form-control" ng-model="searchField.style" ng-options="style.styles for style in finalStyles">
+                                        <option value="">Please Select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row" id="searchProd">
+                                    <div class="col-md-4 rounded text-center">
+                                        Company:
+                                    </div>
+                                    <div class="col-md-8 rounded text-center">
+                                        <select chosen="{width: '100%'}" class="form-control" ng-model="searchField.company" ng-options="style.company for style in arrToJsoncompany">
+                                        <option value="">Please Select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row" id="searchProd">
+                                    <div class="col-md-4 rounded text-center">
+                                        Quantity:
+                                    </div>
+                                    <div class="col-md-8 rounded text-center">
+                                        <select chosen="{width: '100%'}" class="form-control" ng-model="searchField.size" ng-options="style.size for style in arrToJsonSize">
+                                        <option value="">Please Select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!--<div class="row" id="searchProd">
+                                    <div class="col-md-4 rounded text-center">
+                                        Material:
+                                    </div>
+                                    <div class="col-md-8 rounded text-center">
+                                        <select chosen="{width: '100%'}" class="form-control" ng-model="searchField.material" ng-options="style.material for style in arrToJsonMaterial">
+                                        <option value="">Please Select</option>
+                                        </select>
+                                    </div>
+                                </div>-->
+                                <div class="row" style="margin-top: 5px;">
+                                    <div class="col-md-4 offset-3 rounded text-center">
+                                        <button class="btn btn-primary" ng-disabled="searchField == undefined || searchField == null" ng-click="searchSpecs()">Search</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-sm-1"></div>-->
+            <div class="col-md-8 rounded" style="margin-left: 15px;">
+                <!--<div class=" row ">
+                    <div class="col-md-12 text-center" style=" margin-top:4.5%">
+                        <h3 class="section-heading" id="listName">{{listName}}</h3>
+                    </div>
+                </div>-->
+                <!--<div class="row ">
+                    <br/>
+                </div>-->
+                <div class="row rounded" ng-repeat="bottle in data | filter: searchKeyword | startFrom:currentPage*pageSize | limitTo:pageSize" style="margin-bottom: 10px;padding: 5px;background-color: #eceeef;">
+                    <!--<div class="col-md-12 ">-->
+                    <div class="col-md-2 ">
+                        <img src={{bottle.image}} class="rounded" height="125px " width="125px ">
+                    </div>
+                    <div class="col-md-10 ">
+                        <span>{{bottle.bottleName}}</span><br/><span class="text-muted ">Quantity: {{bottle.size}}</span><br/><span class="text-muted ">Our Price(₹) : {{bottle.price}}</span><br/><br/>
+                        <button type="button" ng-click="valForModal(bottle.id)" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">Product Description</button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Product Description</h4>
+                                </div>
+                                <div class="modal-body" ng-repeat="models in model">
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <img src={{models.image}} height="250px " width="250px " class="img-fluid rounded" alt="bottle">
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                            <b>MRP (₹)</b><br/><span style="color:red;">{{models.mrp}}</span>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                            <b>Our Price (₹)</b><br/><span style="color:green;">{{models.price}}</span>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                            <b>Name</b><br/>{{models.bottleName}}
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                            <b>Company</b><br/>{{models.company}}
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-md-6 text-center">
+                                            <b>Quantity</b><br/>{{models.size}}
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                            <b>Type</b><br/>{{models.style}}
+                                        </div>
+                                    </div>
+                                    <!--<br/>-->
+                                    <!--<div class="row">
+                                        <div class="col-md-6 text-center">
+                                            <b>Company</b><br/>{{models.company}}
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                            <b>Material</b><br/>{{models.material}}
+                                        </div>
+                                    </div>
+                                    <br/>-->
+                                    <!--<div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <a style="color:blue;" href='' ng-click="openWindow(models.link)">Click here to download image diagram</a>-->
+                                    <!--<a style="color:blue;" ng-href={{models.link}} download="Bottle_Digram.pdf">Click here to download image diagram</a>-->
+                                    <!--</div>
+                                    </div>-->
+                                </div>
+                                <!--<div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>-->
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row ">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 text-center" ng-hide="hidePagination == true">
+                        <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1" class="btn btn-success btn-sm">
+                        Previous
+                        </button> {{currentPage+1}}/{{numberOfPages()}}
+                        <button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1" class="btn btn-success btn-sm">
+                        Next
+                        </button>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+                <div class="row">
+                    <br/>
+                </div>
+                <div class="alert alert-danger" ng-if="noData">
+                    <strong>{{noData}}</strong>
+                </div>
+            </div>
+            <!--</div>-->
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="copyright ">Your Company © 2017 All Rights Reserved | Developed By: IDG infotech.
+                </span>
+            </div>
+            <!--<div class="col-md-4 ">
+                <ul class="list-inline social-buttons ">
+                    <li class="list-inline-item ">
+                        <a href="# "><i class="fa fa-twitter "></i></a>
+                    </li>
+                    <li class="list-inline-item ">
+                        <a href="# "><i class="fa fa-facebook "></i></a>
+                    </li>
+                    <li class="list-inline-item ">
+                        <a href="# "><i class="fa fa-linkedin "></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 ">
+                <ul class="list-inline quicklinks ">
+                    <li class="list-inline-item ">
+                        <a href="# ">Privacy Policy</a>
+                    </li>
+                    <li class="list-inline-item ">
+                        <a href="# ">Terms of Use</a>
+                    </li>
+                </ul>
+            </div>-->
+        </div>
+    </div>
+</footer>

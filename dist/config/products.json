@@ -1,0 +1,75 @@
+[{
+        "id": "1",
+        "style": "Protein",
+        "company": "Muscletech",
+        "bottleName": "Nitrotect",
+        "size": "4lb",
+        "mrp": "7,000",
+        "price": "4,600",
+        "image": "images/generic/product/1.jpg"
+    },
+    {
+        "id": "2",
+        "style": "Protein",
+        "company": "Nature's Best",
+        "bottleName": "ISO Pure",
+        "size": "3lb",
+        "mrp": "7,000",
+        "price": "4,500",
+        "image": "images/generic/product/2.jpg"
+    }, {
+        "id": "3",
+        "style": "Protein",
+        "company": "ON",
+        "bottleName": "Gold Standard",
+        "size": "5lb",
+        "mrp": "7,700",
+        "price": "5,800",
+        "image": "images/generic/product/3.jpg"
+    }, {
+        "id": "4",
+        "style": "Protein",
+        "company": "ON",
+        "bottleName": "Gold Standard",
+        "size": "10lb",
+        "mrp": "14,600",
+        "price": "10,000",
+        "image": "images/generic/product/4.jpg"
+    }, {
+        "id": "5",
+        "style": "BCAA",
+        "company": "Scivation",
+        "bottleName": "Xtend BCAA",
+        "size": "30 Servings",
+        "mrp": "3,150",
+        "price": "2,150",
+        "image": "images/generic/product/5.jpg"
+    }, {
+        "id": "6",
+        "style": "BCAA",
+        "company": "Scivation",
+        "bottleName": "Xtend BCAA",
+        "size": "90 Servings",
+        "mrp": "7,250",
+        "price": "4,650",
+        "image": "images/generic/product/6.jpg"
+    }, {
+        "id": "7",
+        "style": "Shaker",
+        "company": "Generic",
+        "bottleName": "3 Floor",
+        "size": "150ml",
+        "mrp": "700",
+        "price": "600",
+        "image": "images/generic/product/7.jpg"
+    }, {
+        "id": "8",
+        "style": "Shaker",
+        "company": "Generic",
+        "bottleName": "1 Floor",
+        "size": "150ml",
+        "mrp": "300",
+        "price": "120",
+        "image": "images/generic/product/8.jpg"
+    }
+]

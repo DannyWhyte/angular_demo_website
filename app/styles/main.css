@@ -1,0 +1,341 @@
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+body {
+    padding: 0;
+}
+
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* Custom page header */
+
+.header {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+}
+
+
+/* Make the masthead heading the same height as the navigation */
+
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+
+/* Custom page footer */
+
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow>hr {
+    margin: 30px 0;
+}
+
+
+/* Main marketing message and sign up button */
+
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+
+/* Supporting marketing content */
+
+.marketing {
+    margin: 40px 0;
+}
+
+.marketing p+h4 {
+    margin-top: 28px;
+}
+
+
+/* Responsive: Portrait tablets and up */
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+
+#navContainer {
+    max-width: 100% !important;
+}
+
+#brandName {
+    font-size: 20px !important;
+}
+
+#aboutUsImgBorder {
+    border: 3px solid;
+    border-color: #eceeef;
+}
+
+#aboutUsText {
+    text-align: justify;
+}
+
+
+/*#WhyUsImgBorder {
+    border: 4px solid;
+    border-color: #fed136;
+}*/
+
+#whyUsText {
+    text-align: justify;
+}
+
+#whatWeDoImgBorder {
+    border: 3px solid;
+    border-color: #eceeef;
+}
+
+.ourProdImgContainer {
+    position: relative;
+    width: 100%;
+}
+
+.ourProdImage {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 3px solid;
+    border-color: #fed136;
+}
+
+.ourProdOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #ffffff;
+}
+
+.ourProdImgContainer:hover .ourProdOverlay {
+    opacity: 0.5;
+}
+
+.ourProdText {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 360px) {
+    nav>.container {
+        width: 100%;
+    }
+    .ourProdText {
+        color: black;
+        font-size: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .ourProdOverlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 10%;
+        right: 10%;
+        height: auto;
+        width: auto;
+        opacity: 0;
+        transition: .5s ease;
+        /*background-color: #fed136;*/
+    }
+}
+
+#listName {
+    color: #fed136;
+}
+
+#productPageBorder {
+    /*border: 1px solid;*/
+    /*border-color: #222222;*/
+    /*border-radius: 1px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3);*/
+    background-color: whitesmoke;
+}
+
+#searchProd {
+    margin-bottom: 5px;
+    /*font-weight: 600;*/
+    color: black;
+}
+
+#contactusLabel {
+    color: white;
+    font-size: 20px;
+}
+
+.center-block-button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+@media (max-width: 400px) {
+    #forsmall {
+        margin-top: 67px;
+    }
+}
+
+@media (max-width: 700px) {
+    #forsmall {
+        margin-top: 67px;
+    }
+}
+
+.item {
+    overflow: hidden;
+}
+
+.item img {
+    max-width: 100%;
+    -moz-transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+.item:hover img {
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.itemCircle {
+    overflow: hidden;
+    width: 100%;
+    height: 200%;
+    border-radius: 90%;
+}
+
+.itemCircle img {
+    max-width: 100%;
+    -moz-transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+.itemCircle:hover img {
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+
+/*========================agency.css=========================================
+=============================================================================
+============================================================================*/
+
+
+/* cyrillic-ext */
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(theme-fonts-offline/RobotoSlab-Regular.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Droid Serif';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url(theme-fonts-offline/DroidSerif-Italic.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Droid Serif';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Droid Serif Bold Italic'), local('DroidSerif-BoldItalic'), url(theme-fonts-offline/DroidSerif-BoldItalic.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url(theme-fonts-offline/Montserrat-Regular.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Bold'), local('Montserrat-Bold'), url(theme-fonts-offline/Montserrat-Bold.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
